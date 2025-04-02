@@ -1,2 +1,2 @@
 # tradewise
-Stock managing web app
+TradeWise - a stock managing web app
