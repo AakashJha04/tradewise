@@ -1,7 +1,10 @@
-import Image from "next/image";
+import Dashboard from "./dashboard/page";
 
 export default function Home() {
   return (
-    <div>Trade Wise</div>
+    <div>
+      <span>Educosys Stock Broker App</span>
+      <Dashboard />
+    </div>
   );
 }

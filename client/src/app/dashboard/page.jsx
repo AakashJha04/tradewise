@@ -1,21 +1,19 @@
+"use client"
 import React from 'react'
-import Sidebar from '../_components/sidebar'
+import SideBar from '../_components/sidebar'
+import StockChart from '../_components/stockchart';
 
 const Dashboard = () => {
   return (
     <div className='h-screen flex'>
         <div className='w-1/5'>
-          <Sidebar/>
+            <SideBar />
         </div>
         <div className='w-4/5'>
-          <div className='h-1/2'>
-            Portfolio
-          </div>
-          <div className='h-1/2'>
-            Market Charts
-          </div>
+            <div>
+                <StockChart />
+            </div>
         </div>
-      
     </div>
   )
 }
