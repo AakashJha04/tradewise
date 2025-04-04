@@ -4,6 +4,7 @@ import express from 'express';
 import dotenv from "dotenv"
 import UpstoxClient from "upstox-js-sdk";
 import cors from "cors";
+import stocksRouter from "./routes/stocks.routes.js"
 dotenv.config();
 const app = express();
 app.use(cors());
@@ -15,6 +16,8 @@ const authurlfortoken_sample = `https://api.upstox.com/v2/login/authorization/di
 app.get('/', async (req, res) => {
    res.json({ message: "Trade-Wise Stock Broker Order Executioner Service" });
 });
+
+app.use('/stocks', stocksRouter);
 
 // Endpoint just to login upstox API
 app.get('/getDataFromUpstox', (req, res) => {
@@ -137,7 +140,6 @@ app.get("/getDataMonthlyInterval", (req, res) => {
         }
     });
 })
-
 
 app.listen(port, () => {
    console.log(`Server is listening at http://localhost:${port}`);
